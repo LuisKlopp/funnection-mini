@@ -62,6 +62,7 @@ const config = {
         "15": "60px",
       },
       colors: {
+        primaryColor: "#576ecb",
         gray01: "#f9f9f7",
         gray02: "#f1f0ee",
         gray03: "#e2e0dc",
