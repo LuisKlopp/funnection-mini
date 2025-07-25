@@ -1,4 +1,4 @@
-import { QuestionSubmit } from "@/components/question-submit";
+import { QuestionsSlider } from "@/components/questions-slider";
 
 export default function Home() {
   return (
@@ -10,7 +10,7 @@ export default function Home() {
         </div>
       </header>
 
-      <QuestionSubmit />
+      <QuestionsSlider />
     </div>
   );
 }
