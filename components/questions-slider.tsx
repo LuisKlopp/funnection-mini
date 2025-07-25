@@ -24,10 +24,10 @@ export const QuestionsSlider = () => {
               step === "question" ? "translateX(0%)" : "translateX(-50%)",
           }}
         >
-          <div className="w-1/2 shrink-0">
+          <div className="w-1/2">
             <QuestionSubmit onNext={() => setStep("ox")} />
           </div>
-          <div className="w-1/2 shrink-0">
+          <div className="w-1/2">
             <OXSubmit onBack={() => setStep("question")} />
           </div>
         </div>

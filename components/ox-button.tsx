@@ -31,7 +31,7 @@ export const OXButton = ({
     <button
       onClick={onClick}
       className={cn(
-        "button-base h-[50px] w-[120px] rounded-full bg-white py-3 text-2xl shadow-sm transition-all hover:opacity-90 active:scale-[0.98]",
+        "button-base h-[50px] w-1/2 rounded-full bg-white py-3 text-2xl shadow-sm transition-all hover:opacity-90 active:scale-[0.98]",
         selected ? selectedBorderClass[type] : borderColorClass[type],
         className
       )}

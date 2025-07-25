@@ -22,7 +22,7 @@ export const QuestionSubmit = ({ onNext }: { onNext: () => void }) => {
           value={answer}
           onChange={(e) => setAnswer(e.target.value)}
           placeholder="답변을 입력해보세요 :)"
-          className="box-shadow-02 !w-full"
+          className="box-shadow-02 !w-full text-[#7370dd]"
         />
         <div className="flex w-full justify-end">
           <button
