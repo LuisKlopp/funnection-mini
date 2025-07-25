@@ -13,7 +13,7 @@ export const QuestionsSlider = () => {
       <header className="flex h-14 w-full max-w-[500px] items-center justify-center text-lg font-semibold">
         <div className="flex items-center gap-2">
           <span className="text-[#7370dd]">Funnection</span>
-          <span className="text-[20px] text-[#8195c9]">mini</span>
+          <span className="text-[20px] text-[#8195c9]">light</span>
         </div>
       </header>
       <div className="relative w-full max-w-[500px] overflow-hidden">
