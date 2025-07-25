@@ -1,6 +1,6 @@
 import React from "react";
 
-import { cn } from "@/lib/utils"; // ✅ 유틸 가져오기
+import { cn } from "@/lib/utils";
 
 interface OXButtonProps {
   label: string;
@@ -17,23 +17,22 @@ export const OXButton = ({
   className,
   type,
 }: OXButtonProps) => {
-  const colorClass = {
-    yes: {
-      selected: "bg-primary-color text-white",
-      default: "bg-white text-primary-color",
-    },
-    no: {
-      selected: "bg-red-500 text-white",
-      default: "bg-white text-red-700",
-    },
+  const borderColorClass = {
+    yes: "text-primary-color",
+    no: "text-red-700",
+  };
+
+  const selectedBorderClass = {
+    yes: "border-2 border-primary-color text-primary-color",
+    no: "border-2 border-red-500 text-red-700",
   };
 
   return (
     <button
       onClick={onClick}
       className={cn(
-        "button-base h-[50px] w-[100px] rounded-full py-3 text-2xl shadow-md transition-all hover:opacity-90 active:scale-[0.98]",
-        selected ? colorClass[type].selected : colorClass[type].default,
+        "button-base h-[50px] w-[120px] rounded-full bg-white py-3 text-2xl shadow-sm transition-all hover:opacity-90 active:scale-[0.98]",
+        selected ? selectedBorderClass[type] : borderColorClass[type],
         className
       )}
     >

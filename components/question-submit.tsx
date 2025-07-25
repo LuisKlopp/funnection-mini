@@ -24,16 +24,18 @@ export const QuestionSubmit = ({ onNext }: { onNext: () => void }) => {
           placeholder="답변을 입력해보세요 :)"
           className="box-shadow-02 !w-full"
         />
-        <button
-          onClick={onNext}
-          disabled={!answer}
-          className={cn(
-            "font-jua mt-12 w-[200px] cursor-pointer rounded-full bg-[#7370dd] py-3 text-white shadow-md hover:opacity-90 active:scale-[0.98]",
-            { "hover:none pointer-events-none bg-[#9999df]": !answer }
-          )}
-        >
-          답변하기
-        </button>
+        <div className="flex w-full justify-end">
+          <button
+            onClick={onNext}
+            disabled={!answer}
+            className={cn(
+              "font-jua mt-12 w-[130px] cursor-pointer rounded-full bg-[#7370dd] py-3 font-normal text-white shadow-md hover:opacity-90 active:scale-[0.98]",
+              { "hover:none pointer-events-none bg-[#9999df]": !answer }
+            )}
+          >
+            다음으로 &gt;&gt;
+          </button>
+        </div>
       </div>
     </main>
   );
