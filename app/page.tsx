@@ -2,7 +2,7 @@ import { QuestionsSlider } from "@/components/questions-slider";
 
 export default function Home() {
   return (
-    <div className="flex h-[100dvh] w-full flex-col items-center bg-[#d7dfee]">
+    <div className="flex h-[100dvh] w-full flex-col items-center bg-[#dae3f4]">
       <header className="flex h-14 w-full max-w-[500px] items-center justify-center text-lg font-semibold">
         <div className="flex items-center gap-2">
           <span className="text-primary-color">Funnection</span>

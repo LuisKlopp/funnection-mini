@@ -19,10 +19,7 @@ export const Input = ({
   return (
     <div className="flex w-full items-center justify-center">
       <input
-        className={cn(
-          "input-custom box-shadow-03 font-jua rounded-lg bg-white",
-          className
-        )}
+        className={cn("input-custom font-jua rounded-lg bg-white", className)}
         placeholder={placeholder}
         value={value}
         onChange={onChange}

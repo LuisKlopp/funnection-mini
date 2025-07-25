@@ -1,5 +1,6 @@
 import "../styles/globals.css";
 
+import MobileViewportHandler from "@/components/mobile-viewport-handler";
 import { lineSeed } from "@/public/fonts/fonts";
 
 export const metadata = {
@@ -30,7 +31,10 @@ export default function RootLayout({
 }>) {
   return (
     <html lang="en">
-      <body className={`${lineSeed.className}`}>{children}</body>
+      <body className={`${lineSeed.className}`}>
+        <MobileViewportHandler />
+        {children}
+      </body>
     </html>
   );
 }
