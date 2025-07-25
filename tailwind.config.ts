@@ -29,7 +29,7 @@ const config = {
       },
       fontFamily: {
         lineseed: ["lineSeed", "sans-serif"],
-        playfair: ["var(--font-playfair)", "serif"],
+        jua: ["Jua", "sans-serif"],
       },
       screens: {
         sm: "576px",
