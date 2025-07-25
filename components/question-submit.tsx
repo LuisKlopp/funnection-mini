@@ -6,7 +6,11 @@ import { cn } from "@/lib/utils";
 
 import { Input } from "./input";
 
-export const QuestionSubmit = ({ onNext }: { onNext: () => void }) => {
+interface QuestionSubmit {
+  onNext: () => void;
+}
+
+export const QuestionSubmit = ({ onNext }: QuestionSubmit) => {
   const [answer, setAnswer] = useState("");
 
   return (
