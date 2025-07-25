@@ -9,7 +9,7 @@ export const QuestionSubmit = () => {
 
   return (
     <main className="flex h-full max-w-[500px] flex-1 flex-col items-center justify-center overflow-y-auto p-4">
-      <div className="mt-6 flex flex-col gap-4 rounded-xl bg-[#ECF0FF] p-4 shadow-sm">
+      <div className="mb-12 flex flex-col gap-4 rounded-xl bg-[#ECF0FF] p-4 shadow-sm">
         <h2 className="mb-2 text-sm font-normal text-[#7487cc]">오늘의 문답</h2>
 
         <p className="font-jua text-base text-[#2e3953]">
