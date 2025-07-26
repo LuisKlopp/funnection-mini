@@ -1,17 +1,16 @@
 "use client";
 
-import { useState } from "react";
-
 import { cn } from "@/lib/utils";
+import { useAnswerStore } from "@/store/answer-store";
 
 import { Input } from "./input";
 
-interface QuestionSubmit {
+interface QuestionSubmitProps {
   onNext: () => void;
 }
 
-export const QuestionSubmit = ({ onNext }: QuestionSubmit) => {
-  const [answer, setAnswer] = useState("");
+export const QuestionSubmit = ({ onNext }: QuestionSubmitProps) => {
+  const { questionAnswer, setQuestionAnswer } = useAnswerStore();
 
   return (
     <main className="flex h-full w-full flex-col items-center justify-center overflow-y-auto p-4">
@@ -23,18 +22,18 @@ export const QuestionSubmit = ({ onNext }: QuestionSubmit) => {
           요즘 나를 행복하게 하는 사소한 것들이 있다면?
         </p>
         <Input
-          value={answer}
-          onChange={(e) => setAnswer(e.target.value)}
+          value={questionAnswer}
+          onChange={(e) => setQuestionAnswer(e.target.value)}
           placeholder="답변을 입력해보세요 :)"
           className="box-shadow-02 !w-full text-[#7370dd]"
         />
         <div className="flex w-full justify-end">
           <button
             onClick={onNext}
-            disabled={!answer}
+            disabled={!questionAnswer}
             className={cn(
               "font-jua mt-12 w-[130px] cursor-pointer rounded-full bg-[#7370dd] py-3 font-normal text-white shadow-md hover:opacity-90 active:scale-[0.98]",
-              { "hover:none pointer-events-none bg-[#9999df]": !answer }
+              { "hover:none pointer-events-none bg-[#9999df]": !questionAnswer }
             )}
           >
             다음으로 &gt;&gt;
