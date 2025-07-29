@@ -1,6 +1,6 @@
 import { create } from "zustand";
 
-type AnswerState = {
+export type AnswerState = {
   questionAnswer: string;
   oxAnswer: "O" | "X" | null;
   setQuestionAnswer: (answer: string) => void;
