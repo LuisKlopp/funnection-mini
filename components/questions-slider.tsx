@@ -1,13 +1,14 @@
 "use client";
 
-import { useState } from "react";
+import { LightQuestion } from "@/types/light-question.type";
 
-import { OXSubmit } from "./ox-submit";
 import { QuestionSubmit } from "./question-submit";
 
-export const QuestionsSlider = () => {
-  const [step, setStep] = useState<"question" | "ox">("question");
+interface QuestionsSliderProps {
+  question: LightQuestion;
+}
 
+export const QuestionsSlider = ({ question }: QuestionsSliderProps) => {
   return (
     <div className="flex h-full w-full flex-col items-center justify-center">
       <header className="flex h-14 w-full max-w-[500px] items-center justify-center text-lg font-semibold">
@@ -17,18 +18,12 @@ export const QuestionsSlider = () => {
         </div>
       </header>
       <div className="relative w-full max-w-[500px] overflow-hidden">
-        <div
-          className="flex h-full w-[200%] transition-transform duration-500 ease-in-out"
-          style={{
-            transform:
-              step === "question" ? "translateX(0%)" : "translateX(-50%)",
-          }}
-        >
+        <div className="flex h-full w-[200%] transition-transform duration-500 ease-in-out">
           <div className="w-1/2">
-            <QuestionSubmit onNext={() => setStep("ox")} />
+            <QuestionSubmit question={question} />
           </div>
           <div className="w-1/2">
-            <OXSubmit onBack={() => setStep("question")} />
+            {/* <OXSubmit onBack={() => setStep("question")} /> */}
           </div>
         </div>
       </div>
